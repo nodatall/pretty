@@ -8,6 +8,12 @@ function hideByClassName(className) {
   })
 }
 
+function addStyleByClass(className, style) {
+  Array.from(getByClass(className)).forEach( element => {
+    Object.assign(element.style, style)
+  })
+}
+
 function hideClassNameList(classNameList) {
   classNameList.forEach( className => hideByClassName(className) )
 }
