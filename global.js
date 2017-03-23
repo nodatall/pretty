@@ -12,18 +12,18 @@ function hideClassNameList(classNameList) {
   classNameList.forEach( className => hideByClassName(className) )
 }
 
-function checkIfLoaded(targetElement, className) {
+function checkIfLoaded(targetElement, className, callback) {
   if ( targetElement.length ) {
-    hideByClassName(className)
+    callback(className)
     return
   } else {
     window.setTimeout( function() {
       targetElement = getByClass(className)
-      checkIfLoaded(targetElement, className)
+      checkIfLoaded(targetElement, className, callback)
     }, 200)
   }
 }
 
-function hideOnLoad(className) {
-  checkIfLoaded(getByClass(className), className)
+function actionOnLoad(className, callback) {
+  checkIfLoaded(getByClass(className), className, callback)
 }

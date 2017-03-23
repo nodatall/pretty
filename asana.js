@@ -1,3 +1,3 @@
 // Uses functions in global.js
 
-hideOnLoad('topbarContingentUpgradeButton-button')
+actionOnLoad('topbarContingentUpgradeButton-button', hideByClassName)
