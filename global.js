@@ -15,7 +15,6 @@ function hideClassNameList(classNameList) {
 function checkIfLoaded(targetElement, className, callback) {
   if ( targetElement.length ) {
     callback(className)
-    return
   } else {
     window.setTimeout( function() {
       targetElement = getByClass(className)
