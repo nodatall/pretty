@@ -1,12 +1,4 @@
-function byClass(className) {
-  return document.getElementsByClassName(className)
-}
-
-function hide(className) {
-  Array.from(byClass(className)).forEach( element => {
-    Object.assign(element.style, { display: 'none' })
-  })
-}
+// Uses functions in global.js
 
 const hideList = [
   'FacebookLikeButton',
@@ -18,4 +10,4 @@ const hideList = [
   'Avatar-image'
 ]
 
-hideList.forEach( className => hide(className) )
+hideClassNameList(hideList)
